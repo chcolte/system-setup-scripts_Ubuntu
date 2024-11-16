@@ -1,6 +1,12 @@
 # system-setup-scripts_Ubuntu
 Ubuntu系OS設定用のbashファイル
 
+## set_OS_config.sh
+
+このスクリプトは、Ubuntu系DesktopOSの一般利用に必須の設定変更を自動化するためのものです。現状では、以下の設定項目があります。
+
+- ハードウェアクロックの設定（Windowsと共存するためにローカル時刻に設定）
+
 ## install_required_software.sh
 
 このスクリプトは、`apt`、`snap`、`flatpak`などの異なるパッケージマネージャを使用して、さまざまなソフトウェアパッケージをインストールします。各カテゴリのソフトウェアをインストールする前に、確認が入ります。
@@ -35,31 +41,27 @@ Ubuntu系OS設定用のbashファイル
   - DiscordChatExporter
   - VLCメディアプレーヤー
 
-### スクリプトの実行方法
+### 必要環境
+- debパッケージサポート
+- flatpak
+- snap
 
-1. 必要な環境を確認してください:
-   - .debパッケージサポート
-   - flatpak
-   - snap
-
-2. リポジトリをクローンし、ディレクトリに移動します:
-   ```bash
-   git clone <repository_url>
-   cd system-setup-scripts_Ubuntu
-   ```
-
-3. スクリプトを実行可能にします:
-   ```bash
-   chmod +x install_required_software.sh
-   ```
-
-4. スクリプトを実行します:
-   ```bash
-   ./install_required_software.sh
-   ```
-
-5. プロンプトに従って、インストールしたいソフトウェアカテゴリを選択します。
 
 ### 動作確認環境
 
 - ZorinOS17
+
+## 使い方
+1. クローンします：
+2. 使いたいスクリプトを実行可能にします:
+   ```bash
+   chmod +x install_required_software.sh
+   ```
+
+3. 使いたいスクリプトを実行します:
+   ```bash
+   ./install_required_software.sh
+   ```
+
+4. プロンプトに従って、インストールしたいソフトウェアカテゴリを選択します。
+
